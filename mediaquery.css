@@ -1,0 +1,39 @@
+* {
+    font-size: 1.1rem;
+} 
+
+main {
+    display: grid;
+    grid-template-columns: 20ch 75ch 1fr;
+}
+
+@media (180ch < width) {
+main {
+    grid-template-columns:  1fr 20ch 75ch 20ch 1fr;
+
+    :first-child {
+        grid-column: 2;
+    }
+}
+}
+
+
+@media (width < 120ch) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+article {
+    font-size: 2rem;
+    h2 {
+        font-size: 1.5rem;
+    }
+    h3 {
+        font-size: 1.5em;
+    }
+}
+
+
+
